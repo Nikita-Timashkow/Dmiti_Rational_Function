@@ -361,7 +361,7 @@ class TestRationalCoefficients(unittest.TestCase):
             self.create_poly_with_rational_coeffs([1])
         )
         result = rf1 / rf2
-        self.assertIn("2/3", result.show())
+        self.assertEqual(result.show(), "(2x)/(3)")
 
     def test_complex_fractional_expression(self):
         """Тест сложного выражения с дробными коэффициентами"""
@@ -413,7 +413,7 @@ class TestRationalCoefficients(unittest.TestCase):
         result = rf.show()
 
         # Должны быть и целые и дробные коэффициенты
-        self.assertEqual(result, "((3/2)x^2 + (9/8)x + (3/4))/(3x + 1)" )
+        self.assertEqual(result, "(12x^2 + 9x + 6)/(24x + 8)" )
 
     def test_negative_rational_coefficients(self):
         """Тест отрицательных дробных коэффициентов"""
@@ -441,7 +441,7 @@ class TestRationalCoefficients(unittest.TestCase):
         result = numerator / denominator
 
         # Результат должен упроститься до константы
-        self.assertEqual(result.show(), "(5/6)")
+        self.assertEqual(result.show(), "(5)/(6)")
 
     def test_chain_operations_rational_coeffs(self):
         """Тест цепочки операций с рациональными коэффициентами"""

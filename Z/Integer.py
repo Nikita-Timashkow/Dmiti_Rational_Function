@@ -1,5 +1,16 @@
 from N.Natural import Natural
 
+def TRANS_Z_Q(Z: 'Integer') -> 'Rational':
+    from Q.Rational import Rational
+    """
+    Богданов Никита Константинович
+    Преобразование целого в дробное
+    """
+    # Создаем натуральное 1 для знаменателя
+    one_natural = Natural(0, [1])
+
+    return Rational(Z, one_natural)
+
 class Integer:
     def __init__(self, s, n, A):
         self.s = s  # int знак числа (1 — минус, 0 — плюс)

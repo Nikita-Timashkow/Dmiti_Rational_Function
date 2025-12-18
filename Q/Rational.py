@@ -2,6 +2,14 @@ from N.Natural import Natural
 from Z.Integer import Integer
 #from TRANS.TRANS_N_Z import TRANS_N_Z
 
+def TRANS_Q_Z(q) -> Integer:
+    """Сделал: Соколовский Артём"""
+    one=Natural(0,[1])
+    if q.denominator.COM_NN_D(one)!=0:
+        raise ValueError("den!=1")
+    return Integer(q.numerator.s,q.numerator.len,q.numerator.A[:])
+
+
 def TRANS_N_Z(N):
     """
     Сделала: Имховик Наталья

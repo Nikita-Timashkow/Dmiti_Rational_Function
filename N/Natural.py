@@ -1,3 +1,13 @@
+def TRANS_N_Z(N):
+    from Z.Integer import Integer
+    """
+    Сделала: Имховик Наталья
+    Преобразование натурального в целое
+    Возвращает целое
+    """
+    # Формируем положительное целое с полями натурального
+    return Integer(0, N.len, N.A[:])
+
 class Natural:
     def __init__(self, n, A):
         self.A = A  # [] массив из int   123 -> [1, 2, 3]

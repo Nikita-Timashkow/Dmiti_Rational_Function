@@ -1,7 +1,9 @@
 from P.Polynomial import Polynomial
 from Q.Rational import Rational
-from N.Natural import Natural
-from Z.Integer import Integer
+from N.Natural import Natural, TRANS_N_Z
+from Z.Integer import Integer, TRANS_Z_Q
+
+
 
 class RationalFunction:
     """
@@ -55,8 +57,9 @@ class RationalFunction:
             self._normalize()
 
         # ШАГ 3: Финальная нормализация
-        # Умножаем числитель на сокращенный числовой множитель
-        self.numerator = self.numerator.MUL_PQ_P(common_numeric_factor)
+        # Умножаем числитель и знаменатель на сокращенный числовой множитель
+        self.numerator = self.numerator.MUL_PQ_P(TRANS_Z_Q(common_numeric_factor.numerator))
+        self.denominator = self.denominator.MUL_PQ_P(TRANS_Z_Q(TRANS_N_Z(common_numeric_factor.denominator)))
 
         # Нормализация знака знаменателя
         lead_coeff = self.denominator.LED_P_Q()

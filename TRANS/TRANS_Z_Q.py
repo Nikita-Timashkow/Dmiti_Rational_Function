@@ -1,4 +1,4 @@
-def TRANS_Z_Q(Integer: Z) -> Rational:
+def TRANS_Z_Q(Z: 'Integer') -> 'Rational':
     """
     Богданов Никита Константинович
     Преобразование целого в дробное
