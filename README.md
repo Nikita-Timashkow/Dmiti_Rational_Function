@@ -3,8 +3,11 @@
 ## Запуск калькулятора
 ### Для пользователей
 1. **Скачайте готовую версию:**
-   - [MathCalculator.exe для Windows]([https://github.com/ВАШ-НИК/MathCalculator/releases/latest/download/MathCalculator.exe](https://github.com/Nikita-Timashkow/Dmiti_Rational_Function/releases/tag/v1.0.0))
-2. **Запустите файл** (может потребоваться подтверждение безопасности)
+   - [MathCalculator.exe для Windows](https://github.com/Nikita-Timashkow/Dmiti_Rational_Function/releases/download/v1.0.0/MathCalculator.exe) **Непосредственная загрузка EXE**
+   
+   или
+   
+   - [Страница релиза v1.0.0](https://github.com/Nikita-Timashkow/Dmiti_Rational_Function/releases/tag/v1.0.0) **Просмотр информации о релизе**
 
 ### Для разработчиков
 ```bash
