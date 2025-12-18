@@ -1,2 +1,22 @@
 # Dmiti_Rational_Function
 Математический калькулятор с поддержкой натуральных, целых, рациональных чисел, полиномов и рациональных функций
+## Запуск калькулятора
+### Для пользователей
+1. **Скачайте готовую версию:**
+   - [MathCalculator.exe для Windows]([https://github.com/ВАШ-НИК/MathCalculator/releases/latest/download/MathCalculator.exe](https://github.com/Nikita-Timashkow/Dmiti_Rational_Function/releases/tag/v1.0.0))
+2. **Запустите файл** (может потребоваться подтверждение безопасности)
+
+### Для разработчиков
+```bash
+# 1. Клонируйте репозиторий
+git clone https://github.com/ВАШ-НИК/MathCalculator.git
+cd MathCalculator
+
+# 2. Установите зависимости
+pip install -r requirements.txt
+
+# 3. Запустите
+python interface.py
+
+# 4. Соберите свой EXE (опционально)
+python -m PyInstaller --onefile --windowed interface.py
