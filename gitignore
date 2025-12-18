@@ -1,0 +1,29 @@
+# Python временные файлы
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.env
+.venv
+venv/
+ENV/
+
+# PyInstaller и сборки
+build/
+*.spec
+app/  # Если вы хотите исключить папку с .exe (рекомендуется)
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Системные
+.DS_Store
+Thumbs.db
+
+# Логи и кэш
+*.log
+*.cache
