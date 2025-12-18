@@ -7,7 +7,7 @@
    
    или
    
-   - [Страница релиза v1.0.0](https://github.com/Nikita-Timashkow/Dmiti_Rational_Function/releases/tag/v1.0.1) **Просмотр информации о релизе**
+   - [Страница релиза v1.0.1](https://github.com/Nikita-Timashkow/Dmiti_Rational_Function/releases/tag/v1.0.1) **Просмотр информации о релизе**
 
 ### Для разработчиков
 ```bash
