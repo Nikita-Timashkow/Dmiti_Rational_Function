@@ -21,5 +21,3 @@ pip install -r requirements.txt
 # 3. Запустите
 python interface.py
 
-# 4. Соберите свой EXE (опционально)
-python -m PyInstaller --onefile --windowed interface.py
