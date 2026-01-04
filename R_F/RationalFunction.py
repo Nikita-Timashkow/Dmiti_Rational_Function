@@ -54,7 +54,6 @@ class RationalFunction:
             # Делим числитель и знаменатель на НОД
             self.numerator = self.numerator // gcd_poly
             self.denominator = self.denominator // gcd_poly
-            self._normalize()
 
         # ШАГ 3: Финальная нормализация
         # Умножаем числитель и знаменатель на сокращенный числовой множитель
