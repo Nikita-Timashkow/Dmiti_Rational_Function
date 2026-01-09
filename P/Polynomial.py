@@ -267,6 +267,7 @@ class Polynomial:
         # Остаток от деления равен разности делимого и полученного произведения
         return self - product
 
+
     def GCF_PP_P(self, other):
         """
         Сделала: Имховик Наталья
@@ -287,6 +288,67 @@ class Polynomial:
             R = A % B
             A, B = B, R
 
+        # Нормализация: старший коэффициент равен 1
+        if not all(c.numerator.A == [0] for c in A.C):
+            normalizer = Rational(Integer(0, 0, [1]), Natural(0, [1])) / A.LED_P_Q()
+            A = A.MUL_PQ_P(normalizer)
+
+        return A
+
+
+    def I_GCF_PP_P(self, other):
+        """
+        Алгоритм с итерационным выделением числового коэффициента
+        """
+        # Копируем исходные многочлены
+        A = Polynomial(self.m, self.C[:])
+        B = Polynomial(other.m, other.C[:])
+
+        total_factor = Rational(Integer(0, 0, [1]), Natural(0, [1]))  # Начинаем с 1
+        # Алгоритм Евклида нахождения НОД
+        while not all(c.numerator.A == [0] for c in B.C):
+            f1, A = A.FAC_P_Q()
+            f2, B = B.FAC_P_Q()
+            factor = f1 / f2
+            total_factor *= factor
+            # B - многочлен с меньшей степенью
+            if A.m < B.m:
+                A, B = B, A
+            R = A % B
+            A, B = B, R
+
+        A.MUL_PQ_P(total_factor)
+        # Нормализация: старший коэффициент равен 1
+        if not all(c.numerator.A == [0] for c in A.C):
+            normalizer = Rational(Integer(0, 0, [1]), Natural(0, [1])) / A.LED_P_Q()
+            A = A.MUL_PQ_P(normalizer)
+
+        return A
+
+
+    def M_GCF_PP_P(self, other):
+        """
+        Исходный алгоритм Евклида
+        """
+
+        # Копируем исходные многочлены
+        A = Polynomial(self.m, self.C[:])
+        B = Polynomial(other.m, other.C[:])
+
+        num_factor, A = A.FAC_P_Q()
+        den_factor, B = B.FAC_P_Q()
+
+        common_numeric_factor = num_factor / den_factor
+
+        # Алгоритм Евклида нахождения НОД
+        while not all(c.numerator.A == [0] for c in B.C):
+            # B - многочлен с меньшей степенью
+            if A.m < B.m:
+                A, B = B, A
+            R = A % B
+            A, B = B, R
+
+        A.MUL_PQ_P(common_numeric_factor)
         # Нормализация: старший коэффициент равен 1
         if not all(c.numerator.A == [0] for c in A.C):
             normalizer = Rational(Integer(0, 0, [1]), Natural(0, [1])) / A.LED_P_Q()
