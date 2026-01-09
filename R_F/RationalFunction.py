@@ -47,7 +47,7 @@ class RationalFunction:
         self.denominator = den_simplified
 
         # ШАГ 2: Находим НОД полиномиальных частей
-        gcd_poly = self.numerator.GCF_PP_P(self.denominator)
+        gcd_poly = self.numerator.I_GCF_PP_P(self.denominator)
 
         # Если НОД не равен 1
         if not self._is_unit_polynomial(gcd_poly):
@@ -136,7 +136,7 @@ class RationalFunction:
         denom2 = other.denominator
 
         # НОК(P, Q) = P * Q / НОД(P, Q)
-        gcd = denom1.GCF_PP_P(denom2)
+        gcd = denom1.I_GCF_PP_P(denom2)
         lcm = (denom1 * denom2) // gcd
 
         # Вычисляем дополнительные множители
